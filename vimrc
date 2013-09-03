@@ -9,12 +9,20 @@
 set nocompatible
 filetype off
 
+" Install Vundle
+let run_bundle_install = 0
+if !isdirectory(expand("~/.vim/bundle/vundle/"))
+        silent !echo "Installing Vundle..."
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let run_bundle_install = 1
+endif
+
 " Initialize Vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
 Bundle 'gmarik/vundle'
 
 " Bundles:
@@ -51,6 +59,14 @@ Bundle 'vim-scripts/taglist.vim'
 
 " Non-GitHub repos
 Bundle 'http://git.drupal.org/project/vimrc.git'
+
+if run_bundle_install == 1
+        :BundleInstall
+
+        silent !echo ""
+        silent !echo "Vim is now ready."
+        :cq
+endif
 
 
 " Code Folding
