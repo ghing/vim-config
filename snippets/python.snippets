@@ -1,0 +1,10 @@
+snippet pdb
+	import pdb; pdb.set_trace()
+
+snippet test
+	def test_${1}(self):
+	    """ ${2:docstring} """
+	    ${3:self.fail()}
+
+snippet fr
+	from ${1} import ${2}
