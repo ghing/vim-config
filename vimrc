@@ -5,11 +5,53 @@
 " Other helpful vim resources
 " 'Vim After 11 Years'
 " http://statico.github.io/vim.html
-
-" Load Pathogen plugin
+"
+set nocompatible
 filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+
+" Initialize Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" Bundles:
+"
+" On GitHub
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-git'
+Bundle 'ervandew/supertab'
+Bundle 'sontek/minibufexpl.vim'
+Bundle 'wincent/Command-T'
+Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'sjl/gundo.vim'
+Bundle 'fs111/pydoc.vim'
+Bundle 'alfredodeza/pytest.vim'
+Bundle 'reinh/vim-makegreen'
+Bundle 'sontek/rope-vim'
+Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'groenewege/vim-less'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'lukaszb/vim-web-indent'
+
+" GitHub repos of the user 'vim-scripts'
+Bundle 'vim-scripts/pep8'
+Bundle 'vim-scripts/TaskList.vim'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/grep.vim'
+Bundle 'vim-scripts/vim-coffee-script'
+Bundle 'vim-scripts/closetag.vim'
+Bundle 'vim-scripts/taglist.vim'
+
+" Non-GitHub repos
+Bundle 'http://git.drupal.org/project/vimrc.git'
+
 
 " Code Folding
 set foldmethod=indent
