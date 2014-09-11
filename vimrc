@@ -59,6 +59,7 @@ Bundle 'vim-scripts/grep.vim'
 Bundle 'vim-scripts/vim-coffee-script'
 Bundle 'vim-scripts/closetag.vim'
 Bundle 'vim-scripts/taglist.vim'
+Bundle 'vim-scripts/Auto-Pairs'
 
 " Non-GitHub repos
 Bundle 'http://git.drupal.org/project/vimrc.git'
