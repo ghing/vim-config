@@ -162,6 +162,11 @@ nnoremap <c-\> :CtrlP<CR>
 nmap ; :CtrlPBuffer<CR>
 
 " Powerline
+" In order for the special icons to show up, we need to use on of the patched
+" fonts.  See https://github.com/Lokaltog/powerline-fonts
+if has("gui_macvim") || has("gui_vimr")
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+endif  
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
