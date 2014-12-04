@@ -47,9 +47,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'lukaszb/vim-web-indent'
 Bundle 'tpope/vim-markdown'
-"Bundle 'Floobits'
-Bundle 'Floobits/floobits-vim'
-
 
 " GitHub repos of the user 'vim-scripts'
 Bundle 'vim-scripts/pep8'
