@@ -169,3 +169,6 @@ python powerline_setup()
 python del powerline_setup
 " Because https://github.com/Lokaltog/powerline/issues/230
 set t_Co=256
+
+" Copy to the system clipboard
+set clipboard=unnamed
