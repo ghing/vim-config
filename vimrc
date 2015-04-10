@@ -47,6 +47,9 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'lukaszb/vim-web-indent'
 Bundle 'tpope/vim-markdown'
+" Make links clickable
+Bundle "Rykka/clickable.vim"
+
 
 " GitHub repos of the user 'vim-scripts'
 Bundle 'vim-scripts/pep8'
