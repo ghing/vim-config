@@ -49,6 +49,8 @@ Bundle 'lukaszb/vim-web-indent'
 Bundle 'tpope/vim-markdown'
 " Make links clickable
 Bundle "Rykka/clickable.vim"
+" os.vim is a dependency of clickable.vim
+Bundle "Rykka/os.vim"
 
 
 " GitHub repos of the user 'vim-scripts'
@@ -62,7 +64,9 @@ Bundle 'vim-scripts/taglist.vim'
 Bundle 'vim-scripts/Auto-Pairs'
 
 " Non-GitHub repos
-Bundle 'http://git.drupal.org/project/vimrc.git'
+" I never hack Drupal code anymore.  Keep this in here to remember it if I
+" ever need it.
+" Bundle 'http://git.drupal.org/project/vimrc.git'
 
 if run_bundle_install == 1
         :BundleInstall
