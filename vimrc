@@ -179,3 +179,7 @@ set t_Co=256
 
 " Copy to the system clipboard
 set clipboard=unnamed
+
+" Allow vim to work with crontab -e on Mac OS 
+" See http://vim.wikia.com/wiki/Editing_crontab
+autocmd filetype crontab setlocal nobackup nowritebackup
