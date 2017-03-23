@@ -47,9 +47,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'tpope/vim-markdown'
 " Make links clickable
-Plugin "Rykka/clickable.vim"
+Plugin 'Rykka/clickable.vim'
 " os.vim is a dependency of clickable.vim
-Plugin "Rykka/os.vim"
+Plugin 'Rykka/os.vim'
 
 
 " GitHub repos of the user 'vim-scripts'
