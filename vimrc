@@ -23,52 +23,52 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-" Bundles:
+" Plugins:
 "
 " On GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-git'
-Bundle 'ervandew/supertab'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'wincent/Command-T'
-Bundle 'mitechie/pyflakes-pathogen'
-Bundle 'sjl/gundo.vim'
-Bundle 'fs111/pydoc.vim'
-Bundle 'alfredodeza/pytest.vim'
-Bundle 'reinh/vim-makegreen'
-Bundle 'groenewege/vim-less'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'lukaszb/vim-web-indent'
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-fugitive'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-git'
+Plugin 'ervandew/supertab'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'wincent/Command-T'
+Plugin 'mitechie/pyflakes-pathogen'
+Plugin 'sjl/gundo.vim'
+Plugin 'fs111/pydoc.vim'
+Plugin 'alfredodeza/pytest.vim'
+Plugin 'reinh/vim-makegreen'
+Plugin 'groenewege/vim-less'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'lukaszb/vim-web-indent'
+Plugin 'tpope/vim-markdown'
 " Make links clickable
-Bundle "Rykka/clickable.vim"
+Plugin "Rykka/clickable.vim"
 " os.vim is a dependency of clickable.vim
-Bundle "Rykka/os.vim"
+Plugin "Rykka/os.vim"
 
 
 " GitHub repos of the user 'vim-scripts'
-Bundle 'vim-scripts/pep8'
-Bundle 'vim-scripts/TaskList.vim'
-Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/grep.vim'
-Bundle 'vim-scripts/vim-coffee-script'
-Bundle 'vim-scripts/closetag.vim'
-Bundle 'vim-scripts/taglist.vim'
-Bundle 'vim-scripts/Auto-Pairs'
+Plugin 'vim-scripts/pep8'
+Plugin 'vim-scripts/TaskList.vim'
+Plugin 'vim-scripts/The-NERD-tree'
+Plugin 'vim-scripts/grep.vim'
+Plugin 'vim-scripts/vim-coffee-script'
+Plugin 'vim-scripts/closetag.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/Auto-Pairs'
 
 " Non-GitHub repos
 " I never hack Drupal code anymore.  Keep this in here to remember it if I
 " ever need it.
-" Bundle 'http://git.drupal.org/project/vimrc.git'
+" Plugin 'http://git.drupal.org/project/vimrc.git'
 
 if run_bundle_install == 1
-        :BundleInstall
+        :PluginInstall
 
         silent !echo ""
         silent !echo "Vim is now ready."
