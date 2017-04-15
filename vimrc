@@ -1,6 +1,6 @@
 " Vim configuration file based largely on John Anderson's
 " 'Turning Vim into a modern Python IDE'
-" http://sontek.net/turning-vim-into-a-modern-python-ide 
+" http://sontek.net/turning-vim-into-a-modern-python-ide
 
 " Other helpful vim resources
 " 'Vim After 11 Years'
@@ -112,13 +112,13 @@ map <leader>n :NERDTreeToggle<CR>
 map <leader>j :RopeGotoDefinition<CR>
 
 " Shortcut key to rename things using Ropevim
-map <leader>r :RopeRename<CR> 
+map <leader>r :RopeRename<CR>
 
 " Shortcut key for Ack searching
 nmap <leader>a <Esc>:Ack!
 
 " Statuslines
-" http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html is useful documentation on statuslines 
+" http://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html is useful documentation on statuslines
 " Make status line show for all windows, not just split ones
 set laststatus=2
 
@@ -141,7 +141,7 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 " NOTE: To get code completion for Django modules as well
-" you need to: 
+" you need to:
 " export DJANGO_SETTINGS_MODULE=project.settings
 
 " Create a mapping for makegreen so it doesn't complain
@@ -169,7 +169,7 @@ nmap ; :CtrlPBuffer<CR>
 " fonts.  See https://github.com/Lokaltog/powerline-fonts
 if has("gui_macvim") || has("gui_vimr")
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-endif  
+endif
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
@@ -179,6 +179,22 @@ set t_Co=256
 " Copy to the system clipboard
 set clipboard=unnamed
 
-" Allow vim to work with crontab -e on Mac OS 
+" Allow vim to work with crontab -e on Mac OS
 " See http://vim.wikia.com/wiki/Editing_crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
+
+" Useful editor tweaks recommended by Hillel Wayne (@hillelogram)
+
+" Incremental search. As you type characters vim will start searching.
+set incsearch
+" Highlight strings matching the searches
+set hlsearch
+" This shows line numbers for every line, but I'm fine just looking at the
+" status bar
+" set number
+" Default to case insensitive search.
+" To override, you can do `/\CcaseSensitiveSearchTerm`.
+set ignorecase
+" Buuuut, even easier, `set smartcase` switches to case sensitive searching if
+" the seach string includes uppercase characters
+set smartcase
