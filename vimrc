@@ -50,6 +50,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'Rykka/clickable.vim'
 " os.vim is a dependency of clickable.vim
 Plugin 'Rykka/os.vim'
+Plugin 'vim-airline/vim-airline'
 
 
 " GitHub repos of the user 'vim-scripts'
@@ -164,17 +165,8 @@ nnoremap <c-\> :CtrlP<CR>
 
 nmap ; :CtrlPBuffer<CR>
 
-" Powerline
-" In order for the special icons to show up, we need to use on of the patched
-" fonts.  See https://github.com/Lokaltog/powerline-fonts
-if has("gui_macvim") || has("gui_vimr")
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-endif
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-" Because https://github.com/Lokaltog/powerline/issues/230
-set t_Co=256
+" Powerline fonts
+let g:airline_powerline_fonts = 1
 
 " Copy to the system clipboard
 set clipboard=unnamed
