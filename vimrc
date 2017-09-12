@@ -46,10 +46,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'tpope/vim-markdown'
-" Make links clickable
-Plugin 'Rykka/clickable.vim'
-" os.vim is a dependency of clickable.vim
-Plugin 'Rykka/os.vim'
 Plugin 'vim-airline/vim-airline'
 
 
@@ -165,7 +161,7 @@ nnoremap <c-\> :CtrlP<CR>
 
 nmap ; :CtrlPBuffer<CR>
 
-" Powerline fonts
+" Airline fonts
 let g:airline_powerline_fonts = 1
 
 " Copy to the system clipboard
