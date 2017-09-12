@@ -164,6 +164,11 @@ nmap ; :CtrlPBuffer<CR>
 " Airline fonts
 let g:airline_powerline_fonts = 1
 
+" Make Airline/Powerline colors work in tmux
+" Because https://github.com/Lokaltog/powerline/issues/230
+" See also https://github.com/vim-airline/vim-airline/issues/26
+set t_Co=256
+
 " Copy to the system clipboard
 set clipboard=unnamed
 
