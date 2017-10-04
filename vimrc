@@ -47,6 +47,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
+Plugin 'chrisbra/Colorizer'
 
 
 " GitHub repos of the user 'vim-scripts'
