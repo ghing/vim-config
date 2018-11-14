@@ -128,7 +128,7 @@ set statusline+=%40{fugitive#statusline()}    " Show which Git branch we're curr
 
 " Enable code completion for libraries in your virtualenv
 " Add the virtualenv's site-packages to vim path
-py << EOF
+py3 << EOF
 import os.path
 import sys
 import vim
