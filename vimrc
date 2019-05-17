@@ -43,12 +43,12 @@ Plugin 'reinh/vim-makegreen'
 Plugin 'groenewege/vim-less'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'chrisbra/Colorizer'
 Plugin 'matze/vim-move'
+Plugin 'w0rp/ale'
 
 
 " GitHub repos of the user 'vim-scripts'
@@ -193,3 +193,22 @@ set ignorecase
 " Buuuut, even easier, `set smartcase` switches to case sensitive searching if
 " the seach string includes uppercase characters
 set smartcase
+
+" Configure ALE for use with eslint and Prettier
+" See https://davidtranscend.com/blog/configure-eslint-prettier-vim/
+
+" Customize ALE signs
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
+" Use ALE to automatically fix syntax as you type
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\}
+
+" Fix syntax on save
+" I don't want to do this now, but if I wanted to, uncomment the following
+" line.
+" let g:ale_fix_on_save = 1
