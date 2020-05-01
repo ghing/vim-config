@@ -208,7 +208,25 @@ let g:ale_fixers = {
 \  'javascript': ['eslint'],
 \}
 
+" Tell ALE to run eslint on .svelte files.
+" See
+" https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
+let g:ale_linter_aliases = {
+\  'svelte': ['javascript']
+\}
+let g:ale_linters = {
+\  'svelte': ['eslint']
+\}
+let g:ale_fixers = {
+\  'svelte': ['eslint']
+\}
+
 " Fix syntax on save
 " I don't want to do this now, but if I wanted to, uncomment the following
 " line.
 " let g:ale_fix_on_save = 1
+
+" Treat .svelte files as HTML.
+" See
+" https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
+au BufNewFile,BufRead,BufReadPost *.svelte set syntax=html
