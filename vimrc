@@ -230,3 +230,4 @@ let g:ale_fixers = {
 " See
 " https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
 au BufNewFile,BufRead,BufReadPost *.svelte set syntax=html
+au BufNewFile,BufRead,BufReadPost *.svelte set filetype=html
