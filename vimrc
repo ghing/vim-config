@@ -29,7 +29,6 @@ Plugin 'gmarik/vundle'
 "
 " On GitHub
 Plugin 'tpope/vim-fugitive'
-Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-git'
 Plugin 'ervandew/supertab'
@@ -49,7 +48,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'chrisbra/Colorizer'
 Plugin 'matze/vim-move'
 Plugin 'w0rp/ale'
-
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 
 " GitHub repos of the user 'vim-scripts'
 Plugin 'vim-scripts/pep8'
@@ -231,3 +231,15 @@ let g:ale_fixers = {
 " https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
 au BufNewFile,BufRead,BufReadPost *.svelte set syntax=html
 au BufNewFile,BufRead,BufReadPost *.svelte set filetype=html
+
+" Snippets configuration
+" http://vimcasts.org/episodes/meet-ultisnips/ is a great screencast showing
+" the power of snippets.
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
