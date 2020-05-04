@@ -16,6 +16,18 @@ fresh update
 
 TODO: Update this with other information about parts of the configuration.
 
+### Snippets
+
+Snippets for use with the UltiSnips plugin are in the `UltiSnips` directory. These aren't currently being automatically installed or synced, but I wanted to start tracking them in this repository.
+
+I did the initial copy like this:
+
+```
+rsync -avh ~/.vim/UltiSnips/ ./UltiSnips/
+```
+
+TODO: Figure out some deployment strategy.
+
 ### Package management
 
 I use [Vundle](https://github.com/VundleVim/Vundle.vim) for package management.
