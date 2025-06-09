@@ -50,7 +50,7 @@ Plugin 'matze/vim-move'
 Plugin 'w0rp/ale'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
-Plugin "jasonccox/vim-wayland-clipboard"
+Plugin 'jasonccox/vim-wayland-clipboard'
 
 " GitHub repos of the user 'vim-scripts'
 Plugin 'vim-scripts/pep8'
