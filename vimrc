@@ -49,6 +49,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'chrisbra/Colorizer'
 Plugin 'matze/vim-move'
+Plugin "jasonccox/vim-wayland-clipboard"
 
 
 " GitHub repos of the user 'vim-scripts'
