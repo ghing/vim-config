@@ -1,0 +1,56 @@
+snippet rule "Make rule"
+${1:targets}: ${2:prerequisites}
+	${3:recipe}
+endsnippet
+
+snippet etlmf "Makefile for ETL"
+# ETL pipeline for ${1:description}
+
+${2:SLUG}_DATA_DIR_SRC := \$(DATA_DIR_SRC)/${3:slug}
+$2_DATA_DIR_MANUAL := \$(DATA_DIR_MANUAL)/$3
+$2_DATA_DIR_PROCESSED := \$(DATA_DIR_PROCESSED)/$3
+$2_DATA_DIR_PUBLIC := \$(DATA_DIR_PUBLIC)/$3
+
+$2_SHARED_DATA :=
+
+# Create directories for data
+
+\$($2_DATA_DIR_SRC):
+	mkdir -p $@
+
+\$($2_DATA_DIR_MANUAL):
+	mkdir -p $@
+
+\$($2_DATA_DIR_PROCESSED):
+	mkdir -p $@
+
+\$($2_DATA_DIR_PUBLIC):
+	mkdir -p $@
+endsnippet
+
+snippet etlmfdm "Makefile for ETL (Datamade style)"
+# ETL pipeline for ${1:description}
+
+${2:SLUG}_DATA_DIR := \$(DATA_DIR)/${3:slug}
+$2_DATA_DIR_SRC := \$($2_DATA_DIR)/src
+$2_DATA_DIR_MANUAL :=  \$($2_DATA_DIR)/manual
+$2_DATA_DIR_PROCESSED := \$($2_DATA_DIR)/processed
+$2_DATA_DIR_PUBLIC := \$($2_DATA_DIR)/public
+
+$2_SHARED_DATA :=
+
+# Create directories for data
+
+\$($2_DATA_DIR_SRC):
+	mkdir -p $@
+
+\$($2_DATA_DIR_MANUAL):
+	mkdir -p $@
+
+\$($2_DATA_DIR_PROCESSED):
+	mkdir -p $@
+
+\$($2_DATA_DIR_PUBLIC):
+	mkdir -p $@
+$0
+endsnippet

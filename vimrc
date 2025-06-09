@@ -29,7 +29,6 @@ Plugin 'gmarik/vundle'
 "
 " On GitHub
 Plugin 'tpope/vim-fugitive'
-Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-git'
 Plugin 'ervandew/supertab'
@@ -43,14 +42,15 @@ Plugin 'reinh/vim-makegreen'
 Plugin 'groenewege/vim-less'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'tpope/vim-markdown'
 Plugin 'vim-airline/vim-airline'
 Plugin 'chrisbra/Colorizer'
 Plugin 'matze/vim-move'
+Plugin 'w0rp/ale'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin "jasonccox/vim-wayland-clipboard"
-
 
 " GitHub repos of the user 'vim-scripts'
 Plugin 'vim-scripts/pep8'
@@ -137,7 +137,7 @@ if 'VIRTUAL_ENV' in os.environ:
     project_base_dir = os.environ['VIRTUAL_ENV']
     sys.path.insert(0, project_base_dir)
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
+    exec(open(activate_this).read(), dict(__file__=activate_this))
 EOF
 
 " NOTE: To get code completion for Django modules as well
@@ -194,3 +194,53 @@ set ignorecase
 " Buuuut, even easier, `set smartcase` switches to case sensitive searching if
 " the seach string includes uppercase characters
 set smartcase
+
+" Configure ALE for use with eslint and Prettier
+" See https://davidtranscend.com/blog/configure-eslint-prettier-vim/
+
+" Customize ALE signs
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+
+" Use ALE to automatically fix syntax as you type
+let g:ale_fixers = {
+\  'javascript': ['eslint'],
+\}
+
+" Tell ALE to run eslint on .svelte files.
+" See
+" https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
+let g:ale_linter_aliases = {
+\  'svelte': ['javascript']
+\}
+let g:ale_linters = {
+\  'svelte': ['eslint']
+\}
+let g:ale_fixers = {
+\  'svelte': ['eslint']
+\}
+
+" Fix syntax on save
+" I don't want to do this now, but if I wanted to, uncomment the following
+" line.
+" let g:ale_fix_on_save = 1
+
+" Treat .svelte files as HTML.
+" See
+" https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md
+au BufNewFile,BufRead,BufReadPost *.svelte set syntax=html
+au BufNewFile,BufRead,BufReadPost *.svelte set filetype=html
+
+" Snippets configuration
+" http://vimcasts.org/episodes/meet-ultisnips/ is a great screencast showing
+" the power of snippets.
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
