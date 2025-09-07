@@ -9,6 +9,9 @@
 set nocompatible
 filetype off
 
+" Show line numbers
+set number
+
 " Install Vundle
 let run_bundle_install = 0
 if !isdirectory(expand("~/.vim/bundle/vundle/"))
