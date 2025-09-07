@@ -51,6 +51,7 @@ Plugin 'w0rp/ale'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'jasonccox/vim-wayland-clipboard'
+Plugin 'editorconfig/editorconfig-vim'
 
 " GitHub repos of the user 'vim-scripts'
 Plugin 'vim-scripts/pep8'
